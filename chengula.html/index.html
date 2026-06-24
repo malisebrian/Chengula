@@ -1,6 +1,7 @@
 \
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +11,17 @@
     <style>
         /* --- CSS Variables & Reset --- */
         :root {
-            --primary-color: #2d5a27; /* Farm Green */
+            --primary-color: #2d5a27;
+            /* Farm Green */
             --primary-dark: #1e3d1a;
-            --accent-color: #f9a825; /* Organic Yellow/Orange */
+            --accent-color: #f9a825;
+            /* Organic Yellow/Orange */
             --accent-hover: #fbc02d;
             --text-dark: #333333;
             --text-light: #666666;
             --white: #ffffff;
             --light-bg: #f4f9f4;
-            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
 
@@ -132,7 +135,7 @@
         header.scrolled {
             padding: 0.8rem 0;
             background-color: rgba(45, 90, 39, 0.95);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(5px);
         }
 
@@ -164,7 +167,7 @@
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--accent-color);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .nav-links {
@@ -174,14 +177,15 @@
         }
 
         .nav-links a {
-            color: rgba(255,255,255,0.9);
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
             font-weight: 500;
             transition: var(--transition);
             position: relative;
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--accent-color);
         }
 
@@ -196,18 +200,20 @@
         /* --- Hero Section --- */
         .hero {
             /* User provided image */
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&q=80&w=1500');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&q=80&w=1500');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Parallax effect */
+            background-attachment: fixed;
+            /* Parallax effect */
             min-height: calc(100vh - 80px);
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            padding-top: 60px; /* Offset for fixed header */
+            padding-top: 60px;
+            /* Offset for fixed header */
         }
 
         .hero-content {
@@ -324,7 +330,7 @@
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
 
         .icon-box {
@@ -349,6 +355,13 @@
         .service-card h3 {
             margin-bottom: 15px;
             color: var(--text-dark);
+        }
+
+        .service-grid a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            display: block;
         }
 
         .service-card p {
@@ -387,7 +400,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
             padding: 20px;
             color: white;
             opacity: 0;
@@ -436,7 +449,7 @@
             font-size: 1.2rem;
             width: 40px;
             height: 40px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -498,7 +511,7 @@
             left: 50%;
             bottom: 30px;
             transform: translateX(-50%);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             font-size: 1rem;
         }
 
@@ -568,13 +581,27 @@
         }
 
         @keyframes fadein {
-            from {bottom: 0; opacity: 0;}
-            to {bottom: 30px; opacity: 1;}
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
         }
 
         @keyframes fadeout {
-            from {bottom: 30px; opacity: 1;}
-            to {bottom: 0; opacity: 0;}
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
         }
 
         /* --- Responsive Design --- */
@@ -582,12 +609,17 @@
             .hero h1 {
                 font-size: 2.8rem;
             }
-            .about-grid, .contact-container {
+
+            .about-grid,
+            .contact-container {
                 grid-template-columns: 1fr;
             }
+
             .about-img {
-                order: -1; /* Image on top */
+                order: -1;
+                /* Image on top */
             }
+
             .contact-info-wrapper {
                 padding: 30px;
             }
@@ -619,7 +651,7 @@
             .hero h1 {
                 font-size: 2.2rem;
             }
-            
+
             .hero-buttons {
                 flex-direction: column;
             }
@@ -631,6 +663,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -643,9 +676,9 @@
                 </a>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="/home/mende001/Desktop/Project Mende001 - Copy/chengula.html/about.html">About Us</a></li>
-                    <li><a href="/home/mende001/Desktop/Project Mende001 - Copy/chengula.html/products.html</a></li>
-                    <li><a href="/home/mende001/Desktop/Project Mende001 - Copy/chengula.html/contact.html">Contact</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
@@ -675,9 +708,12 @@
                 </div>
                 <div class="about-text">
                     <h2 class="section-title">Who We Are</h2>
-                    <p>Chengula Poultry Farm is dedicated to raising the highest quality indigenous chickens using traditional and sustainable methods. We believe in free-range farming, allowing our birds to grow in a stress-free, natural environment.</p>
-                    <p>Our commitment to quality ensures that every egg and piece of meat that leaves our farm is nutritious, flavorful, and safe for your family.</p>
-                    
+                    <p>Chengula Poultry Farm is dedicated to raising the highest quality indigenous chickens using
+                        traditional and sustainable methods. We believe in free-range farming, allowing our birds to
+                        grow in a stress-free, natural environment.</p>
+                    <p>Our commitment to quality ensures that every egg and piece of meat that leaves our farm is
+                        nutritious, flavorful, and safe for your family.</p>
+
                     <ul class="feature-list">
                         <li><i class="fas fa-check-circle"></i> 100% Organic Feed</li>
                         <li><i class="fas fa-check-circle"></i> Free Range Environment</li>
@@ -693,38 +729,50 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-title">Our Products</h2>
-                <p class="section-subtitle">Explore our range of fresh poultry products and farm services tailored to meet your needs.</p>
+                <p class="section-subtitle">Explore our range of fresh poultry products and farm services tailored to
+                    meet your needs.</p>
             </div>
-            
+
             <div class="service-grid">
-                <div class="service-card scroll-reveal">
-                    <div class="icon-box">
-                        <i class="fas fa-dove"></i>
+                <a href="free-range-chicken.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-card scroll-reveal">
+                        <div class="icon-box">
+                            <i class="fas fa-dove"></i>
+                        </div>
+                        <h3>Free Range Chicken</h3>
+                        <p>Top quality indigenous (Kienyeji) chickens raised naturally. Tastier meat and higher
+                            nutritional value.</p>
                     </div>
-                    <h3>Free Range Chicken</h3>
-                    <p>Top quality indigenous (Kienyeji) chickens raised naturally. Tastier meat and higher nutritional value.</p>
-                </div>
-                <div class="service-card scroll-reveal">
-                    <div class="icon-box">
-                        <i class="fas fa-utensils"></i>
+                </a>
+                <a href="processed-products.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-card scroll-reveal">
+                        <div class="icon-box">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Processed Products</h3>
+                        <p>Clean and hygienic chicken meat and internal organs, professionally processed and ready for
+                            cooking.</p>
                     </div>
-                    <h3>Processed Products</h3>
-                    <p>Clean and hygienic chicken meat and internal organs, professionally processed and ready for cooking.</p>
-                </div>
-                <div class="service-card scroll-reveal">
-                    <div class="icon-box">
-                        <i class="fas fa-egg"></i>
+                </a>
+                <a href="farm-fresh-eggs.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-card scroll-reveal">
+                        <div class="icon-box">
+                            <i class="fas fa-egg"></i>
+                        </div>
+                        <h3>Farm Fresh Eggs</h3>
+                        <p>Daily collected fresh eggs, rich in omega-3 fatty acids. Perfect for healthy breakfasts.</p>
                     </div>
-                    <h3>Farm Fresh Eggs</h3>
-                    <p>Daily collected fresh eggs, rich in omega-3 fatty acids. Perfect for healthy breakfasts.</p>
-                </div>
-                <div class="service-card scroll-reveal">
-                    <div class="icon-box">
-                        <i class="fas fa-hatchling"></i>
+                </a>
+                <a href="day-old-chicks.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-card scroll-reveal">
+                        <div class="icon-box">
+                            <i class="fas fa-hatchling"></i>
+                        </div>
+                        <h3>Day-Old Chicks</h3>
+                        <p>We supply high-quality, vaccinated breeds for farmers looking to start or expand their
+                            poultry business.</p>
                     </div>
-                    <h3>Day-Old Chicks</h3>
-                    <p>We supply high-quality, vaccinated breeds for farmers looking to start or expand their poultry business.</p>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -740,8 +788,9 @@
             <div class="contact-container">
                 <div class="contact-info-wrapper">
                     <h3>Contact Info</h3>
-                    <p style="margin-bottom: 30px; opacity: 0.9;">Reach out to us via phone or email, or visit our farm for a direct purchase.</p>
-                    
+                    <p style="margin-bottom: 30px; opacity: 0.9;">Reach out to us via phone or email, or visit our farm
+                        for a direct purchase.</p>
+
                     <div class="info-item">
                         <i class="fas fa-phone-alt"></i>
                         <div>
@@ -750,7 +799,7 @@
                             <a href="tel:+255769184685">+255 769 184 685</a>
                         </div>
                     </div>
-                    
+
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
                         <div>
@@ -780,7 +829,8 @@
                         </div>
                         <div class="form-group">
                             <label style="display:block; margin-bottom:5px;">Message</label>
-                            <textarea class="form-control" rows="5" placeholder="How can we help you?" required></textarea>
+                            <textarea class="form-control" rows="5" placeholder="How can we help you?"
+                                required></textarea>
                         </div>
                         <button type="submit" class="btn" style="width:100%;">Send Message</button>
                     </form>
@@ -835,11 +885,11 @@
         const navLinks = document.querySelector('.nav-links');
         const contactForm = document.getElementById('contactForm');
         const toast = document.getElementById('toast');
-        
+
         // 1. Mobile Menu Toggle
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            
+
             // Toggle icon between bars and times
             const icon = menuToggle.querySelector('i');
             if (navLinks.classList.contains('active')) {
@@ -890,13 +940,13 @@
         // 4. Contact Form Handling (Mock Submission)
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             // Show toast notification
             toast.className = "show";
-            
+
             // Hide toast after 3 seconds
-            setTimeout(function(){ 
-                toast.className = toast.className.replace("show", ""); 
+            setTimeout(function () {
+                toast.className = toast.className.replace("show", "");
             }, 3000);
 
             // Reset form
@@ -927,8 +977,21 @@
             }
         }
 
+        // Make sure hash links work, and other links navigate normally
+        pageLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    window.location.hash = href;
+                }
+                // For other links (like product pages), let them navigate normally
+            });
+        });
+
         window.addEventListener('hashchange', updatePage);
         window.addEventListener('load', updatePage);
     </script>
 </body>
+
 </html>

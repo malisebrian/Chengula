@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farm Fresh Eggs | Chengula Poultry Farm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .product-hero {
+      background: linear-gradient(rgba(45, 90, 39, 0.85), rgba(45, 90, 39, 0.9)),
+                  url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=1500');
+      background-size: cover;
+      background-position: center;
+      padding: 150px 0 80px;
+      text-align: center;
+      color: white;
+    }
+    .product-hero h1 { font-size: 3rem; margin-bottom: 20px; }
+    .product-hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+
+    .product-gallery { padding: 80px 0; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    .gallery-item {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .gallery-item:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+    .gallery-item img { width: 100%; height: 300px; object-fit: cover; }
+
+    .contact-section { background-color: var(--light-bg); padding: 80px 0; }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="logo.jpeg" alt="Chengula Farm Logo" class="logo-img" />
+          <span>Chengula Farm</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="product-hero">
+    <div class="container">
+      <h1>Farm Fresh Eggs</h1>
+      <p>Daily collected fresh eggs, rich in omega-3 fatty acids. Perfect for healthy breakfasts.</p>
+    </div>
+  </section>
+
+  <section class="product-gallery">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Our Fresh Eggs</h2>
+        <p class="section-subtitle">Daily collected, farm-fresh eggs straight from our hens</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=600" alt="Farm Fresh Eggs 1">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?auto=format&fit=crop&q=80&w=600" alt="Farm Fresh Eggs 2">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&q=80&w=600" alt="Farm Fresh Eggs 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Order Now</h2>
+        <p class="section-subtitle">Contact us today to place your order for fresh farm eggs</p>
+      </div>
+      <div class="contact-container" style="margin-top: 40px;">
+        <div class="contact-info-wrapper">
+          <h3>Contact Info</h3>
+          <p style="margin-bottom: 30px; opacity: 0.9;">Ready to order? We're here to help!</p>
+          <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <span>Phone:</span><br>
+              <a href="tel:+255622184685">+255 622 184 685</a><br>
+              <a href="tel:+255769184685">+255 769 184 685</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span>Email:</span><br>
+              <a href="mailto:chengulapoultryfarm@gmail.com">chengulapoultryfarm@gmail.com</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span>Location:</span><br>
+              <span>Dar es Salaam, Tanzania</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form id="contactForm">
+            <div class="form-group">
+              <label style="display:block; margin-bottom:5px;">Name</label>
+              <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label style="display:block; margin-bottom:5px;">Phone</label>
+              <input type="tel" class="form-control" placeholder="Your Phone Number" required>
+            </div>
+            <div class="form-group">
+              <label style="display:block; margin-bottom:5px;">Quantity / Message</label>
+              <textarea class="form-control" rows="5" placeholder="How many eggs would you like? Or any other questions..." required></textarea>
+            </div>
+            <button type="submit" class="btn" style="width:100%;">Send Order Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>Chengula Farm</h4>
+          <p>Providing the best indigenous poultry products since 2016.</p>
+          <div style="margin-top: 15px;">
+            <a href="#" style="color:white; margin-right:10px;"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="#" style="color:white; margin-right:10px;"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" style="color:white;"><i class="fab fa-whatsapp fa-lg"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Hours</h4>
+          <p>Mon - Fri: 8am - 6pm</p>
+          <p>Saturday: 9am - 4pm</p>
+          <p>Sunday: Closed</p>
+        </div>
+      </div>
+      <div class="copyright">&copy; 2026 Chengula Poultry Farm. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <div id="toast">Message Sent! We will contact you soon.</div>
+  <script src="main.js" defer></script>
+</body>
+</html>
